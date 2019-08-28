@@ -1,0 +1,7 @@
+clonando, iniciando e criando branch:
+git clone + https
+git init
+git checkout -b + nome da branch
+git push
+git push --set-upstream origin +nome da branch
+
