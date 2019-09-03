@@ -8,15 +8,15 @@ public class MR{
     public static final Integer W = 4;
     Integer x = 0;
     Integer y = 0;
-    Integer facing = N;
-    public Rover() {
+    Integer pos = N;
+    public MR() {
     }
     public void setPosicao (Integer x, Integer y, Integer facing) {
         this.x = x;
         this.y = y;
-        this.facing = facing;
+        this.pos = pos;
     }
-    public void printPosicao) {
+    public void printPosicao() {
         char direcao = 'N';
         if (pos == 1) {
             direcao = 'N';
@@ -27,10 +27,10 @@ public class MR{
         } else if (pos == 4) {
             direcao = 'W';
         }
-        System.out.println(x   " "   y   " "   direcao);
+        System.out.println(x + " "  +  y  + " "  + direcao);
     }
     public void processa (String comandos) {
-        for (int idx = 0; idx < comandos.length(); idx  ) {
+        for (int idx = 0; idx < comandos.length(); idx++) {
             process(comandos.charAt(idx));
         }
     }
@@ -42,8 +42,7 @@ public class MR{
         } else if (comando.equals('M')) {
             mover();
         } else {
-            throw new IllegalArgumentException(
-                    "Caracter não aceito!");
+            throw new IllegalArgumentException("Caracter não aceito!");
         }
     }
 }
