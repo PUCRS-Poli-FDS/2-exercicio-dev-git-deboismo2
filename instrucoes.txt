@@ -16,3 +16,4 @@ obs.: para salvar o que foi feito sempre importante dar um commit e push. Abrir 
 // Abrindo merge request/pull request
 após o git push ele gera um link
 copiar o link e realizar direto no git, conferindo a branch que está fazendo merge, sempre da sua branch para master
+IMPORTANTE: Sempre, ao entrar na sua branch, dar o comando "git pull origin master", para deixar a branch atualizada e de acordo com a master
