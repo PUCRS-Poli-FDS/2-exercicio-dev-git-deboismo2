@@ -1,4 +1,4 @@
-/*Bruno Motta, Nathan Kruger e Guilherme Zago
+/*Bruno Motta, Nathan Kruger e Jonathan Roc
 classe App
 */
 public class App{
