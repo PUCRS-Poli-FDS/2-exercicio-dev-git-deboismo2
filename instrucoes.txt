@@ -1,7 +1,18 @@
 clonando, iniciando e criando branch:
 git clone + https
-git init
+git init //cria e inicia o repositório local
+// para criar a branch:
 git checkout -b + nome da branch
 git push
-git push --set-upstream origin +nome da branch
-
+git push --set-upstream origin +nome da branch //esse comando é interessante, pois deixa ligado diretamente ao repositório do git, permitindo dar um git push direto de lá, evitando conflitos na hora do commit
+git status //para conferir se está na branch certa
+// hora do commit
+git status //para verificar o/os arquivos que foram modificados
+git add -A //adiciona todos os arquivos modificados
+git add +nomeArquivo //adiciona apenas o arquivo desejado
+git commit -m "Comentário sobre o commit"
+git push
+obs.: para salvar o que foi feito sempre importante dar um commit e push. Abrir merge/ pull request apenas na hora que desejar adicionar as mudanças na master
+// Abrindo merge request/pull request
+após o git push ele gera um link
+copiar o link e realizar direto no git, conferindo a branch que está fazendo merge, sempre da sua branch para master
