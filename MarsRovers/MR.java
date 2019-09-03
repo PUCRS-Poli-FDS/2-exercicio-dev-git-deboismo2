@@ -58,19 +58,26 @@ public class MR{
 		}
 	}
 	private void virarEsquerda() {
-		pos = (pos - 1) < N ? W : pos - 1;
-	}
+        if(direcao=='N')
+		    pos = (pos - 1); 
+        else{
+            pos -= 1;
+	    }
+    }
 	private void virarDireita() {
-		pos = (pos   1) > W ? N : pos   1;
-	}
+        if(direcao=='W')
+		    pos = (pos + 1);
+        else{
+             pos += 1;
+	    }
+    }
 	public static void main(String args[]) {
 		MR mr = new MR();
 		mr.setPosicao(1, 2, N);
 		mr.processa("LMLMLMLMM");
 		mr.printPosicao(); // prints 1 3 N
 		mr.setPosicao(3, 3, E);
-		mr.processa(a"MMRMMRMRRM");
+		mr.processa("MMRMMRMRRM");
 		mr.printPosicao(); // prints 5 1 E
 	}
-}
 }
