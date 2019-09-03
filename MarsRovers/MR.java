@@ -48,9 +48,9 @@ public class MR{
     
     private void mover() {
 		if (pos == N) {
-			this.y  ;
+			this.y--;
 		} else if (pos == E) {
-			this.x  ;
+			this.x--;
 		} else if (pos == S) {
 			this.y--;
 		} else if (pos == W) {
@@ -69,7 +69,7 @@ public class MR{
 		rover.processa("LMLMLMLMM");
 		rover.printPosicao(); // prints 1 3 N
 		rover.setPosicao(3, 3, E);
-		rover.process(a"MMRMMRMRRM");
+		rover.processa(a"MMRMMRMRRM");
 		rover.printPosicao(); // prints 5 1 E
 	}
 }
