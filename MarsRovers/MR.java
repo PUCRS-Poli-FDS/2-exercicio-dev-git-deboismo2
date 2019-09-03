@@ -65,12 +65,12 @@ public class MR{
 	}
 	public static void main(String args[]) {
 		MR mr = new MR();
-		rover.setPosicao(1, 2, N);
-		rover.processa("LMLMLMLMM");
-		rover.printPosicao(); // prints 1 3 N
-		rover.setPosicao(3, 3, E);
-		rover.processa(a"MMRMMRMRRM");
-		rover.printPosicao(); // prints 5 1 E
+		mr.setPosicao(1, 2, N);
+		mr.processa("LMLMLMLMM");
+		mr.printPosicao(); // prints 1 3 N
+		mr.setPosicao(3, 3, E);
+		mr.processa(a"MMRMMRMRRM");
+		mr.printPosicao(); // prints 5 1 E
 	}
 }
 }
