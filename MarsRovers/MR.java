@@ -1,4 +1,4 @@
-/*Bruno Motta, Nathan Kruger e Jonathan Roc
+/*Bruno Motta, Nathan Kruger, Jonathan Roc, Guilherme Zago
 classe Mars Rover
 */
 public class MR{
@@ -9,13 +9,19 @@ public class MR{
     Integer x = 0;
     Integer y = 0;
     Integer pos = N;
-    public MR() {
-    }
-    public void setPosicao (Integer x, Integer y, Integer facing) {
+	
+    public MR(Integer x, Integer y, Integer pos) {
+		this.x = x;
+		this.y = y;
+		this.pos = pos;
+	}
+	
+    public void setPosicao (Integer x, Integer y, Integer pos) {
         this.x = x;
         this.y = y;
         this.pos = pos;
     }
+	
     public void printPosicao() {
         char direcao = 'N';
         if (pos == 1) {
@@ -71,13 +77,4 @@ public class MR{
              pos += 1;
 	    }
     }
-	public static void main(String args[]) {
-		MR mr = new MR();
-		mr.setPosicao(1, 2, N);
-		mr.processa("LMLMLMLMM");
-		mr.printPosicao(); // prints 1 3 N
-		mr.setPosicao(3, 3, E);
-		mr.processa("MMRMMRMRRM");
-		mr.printPosicao(); // prints 5 1 E
-	}
 }
