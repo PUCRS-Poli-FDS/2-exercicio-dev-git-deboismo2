@@ -1,4 +1,4 @@
-/*Bruno Motta, Nathan Kruger e Jonathan Roc
+/*Bruno Motta, Nathan Kruger, Jonathan Roc, Guilherme Zago
 classe Mars Rover
 */
 public class MR{
@@ -9,13 +9,19 @@ public class MR{
     Integer x = 0;
     Integer y = 0;
     Integer pos = N;
-    public MR() {
-    }
-    public void setPosicao (Integer x, Integer y, Integer facing) {
+	
+    public MR(Integer x, Integer y, Integer pos) {
+		this.x = x;
+		this.y = y;
+		this.pos = pos;
+	}
+	
+    public void setPosicao (Integer x, Integer y, Integer pos) {
         this.x = x;
         this.y = y;
         this.pos = pos;
     }
+	
     public void printPosicao() {
         char direcao = 'N';
         if (pos == 1) {
@@ -48,9 +54,9 @@ public class MR{
     
     private void mover() {
 		if (pos == N) {
-			this.y  ;
+			this.y--;
 		} else if (pos == E) {
-			this.x  ;
+			this.x--;
 		} else if (pos == S) {
 			this.y--;
 		} else if (pos == W) {
@@ -58,19 +64,17 @@ public class MR{
 		}
 	}
 	private void virarEsquerda() {
-		pos = (pos - 1) < N ? W : pos - 1;
-	}
+        if(direcao=='N')
+		    pos = (pos - 1); 
+        else{
+            pos -= 1;
+	    }
+    }
 	private void virarDireita() {
-		pos = (pos   1) > W ? N : pos   1;
-	}
-	public static void main(String args[]) {
-		MR mr = new MR();
-		rover.setPosicao(1, 2, N);
-		rover.processa("LMLMLMLMM");
-		rover.printPosicao(); // prints 1 3 N
-		rover.setPosicao(3, 3, E);
-		rover.process(a"MMRMMRMRRM");
-		rover.printPosicao(); // prints 5 1 E
-	}
-}
+        if(direcao=='W')
+		    pos = (pos + 1);
+        else{
+             pos += 1;
+	    }
+    }
 }
