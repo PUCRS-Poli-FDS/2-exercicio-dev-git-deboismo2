@@ -59,25 +59,25 @@ public double impostoDevido() {
 	double desconto = 0;
 		if (idade < 65) {
 			if (nroDep <= 2) {
-				desconto = (baseDeCalculo * 0.025);
-			} else if (nroDep >= 3 && nroDep < 6) {
-				desconto = (baseDeCalculo * 0.05);
+				desconto = (baseDeCalculo * 0.02);
+			} else if (nroDep >= 3 && nroDep <= 5) {
+				desconto = (baseDeCalculo * 0.035);
 			} else {
-				desconto = (baseDeCalculo * 0.1);
+				desconto = (baseDeCalculo * 0.05);
 			}
 		} else if (nroDep <= 2) {
 			desconto = (baseDeCalculo * 0.03);
-		} else if (nroDep > 3 && nroDep < 6) {
+		} else if (nroDep >= 3 && nroDep <= 5) {
 			desconto = (baseDeCalculo * 0.045);
 		} else {
 			desconto = (baseDeCalculo * 0.06);
 		}
 		
-	if (baseDeCalculo <= 10000) {
+	if (baseDeCalculo <= 12000) {
 		impostoDevido = 0;
-	} else if (baseDeCalculo > 10000 && baseDeCalculo < 20000) {
-		impostoDevido = 0.15 * (baseDeCalculo - 10000);
-	} else impostoDevido = (0.15 * (baseDeCalculo - 10000)) + 0.3 * (baseDeCalculo - 20000);
+	} else if (baseDeCalculo > 12000 && baseDeCalculo < 24000) {
+		impostoDevido = 0.15 * (baseDeCalculo - 12000);
+	} else impostoDevido = (0.15 * (baseDeCalculo - 12000)) + 0.275 * (baseDeCalculo - 24000);
 		return impostoDevido;
 	}
 }
